@@ -1,0 +1,11 @@
+[Unit]
+Description = Backup
+
+[Service]
+User=vagrant
+WorkingDirectory=/home/vagrant/
+ExecStart=/bin/bash bckup
+Restart=Always
+
+[Install]
+WantedBy=multi-user.target

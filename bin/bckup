@@ -1,0 +1,16 @@
+#!/bin/bash
+
+while getopts "d" opt; do
+	case "${opt}" in
+		d)
+			dir="$2"
+			date= date +"%m-%d-%Y"
+			tar -czf backup-$date.tar.gz --absolute-names $dir
+			rsync -a ./backup-$date.tar.gz ~/backups
+			rm -f ./backup-$date.tar.gz 
+			;;
+	esac
+done
+
+
+	
