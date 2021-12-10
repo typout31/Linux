@@ -2,7 +2,7 @@
 Description=Backup Timer
 
 [Timer]
-OnCalendar=*-*-* 00:15:30
+OnCalendar=*-*-* 01:00:00
 
 [Intall]
 WantedBy=timers.target
